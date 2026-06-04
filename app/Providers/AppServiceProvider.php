@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->registerPlicies();
+
+        Gate::define('delete-post',function($user,$post){
+            return $user->id == $post->user_id;
+        });
     }
 }
