@@ -64,3 +64,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+# authorization-app-practice
+
+## 概要
+policyを使用したBladeの表示形式の変更とコントローラーでの処理方法
+
+## 使用技術
+- PHP 8.x
+- Laravel 10.x
+- Policy / Gate（認可）
+- Laravel Fortify（認証）
+（**他に使ったものがあれば追記してください**）
+
+## 学んだこと
+- gateとpolicyの使い方。どちらも認可を出すものであるが、gateは特定のアクションに対する認可、policyは特定のモデルに対する認可という違いがある。
+- AuthServiceProviderに登録(policyはpoliciesで実装の必要あり)し、コントローラーで使用する。コントローラーでの使用は、どちらもGate::ファサードが使用できる。Gateファサードは、Laravelの認可システム全体への入口で、Gateを呼ぶか、policyを呼ぶかは、Gateファサードを使ったメソッドの引数が関係している。第一引数の名前でGate::defineを探し、あればgeteが使用、なければ第二引数の変数名からpolicyを予測し自動で呼び出す。
+- 
+
+## 動作確認
+htmlページの表示。編集＆削除処理の実行。
