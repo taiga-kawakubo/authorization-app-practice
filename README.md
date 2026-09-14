@@ -85,4 +85,4 @@ Seederで作成される以下のユーザーでログインできます。
 ## 動作確認のスクリーンショット
 ![alt text](docs/image.png)
 ![alt text](docs/image-1.png)
-![alt text]docs/(image-2.png)
+![alt text](docs/image-2.png)
